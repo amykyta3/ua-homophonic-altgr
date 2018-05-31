@@ -37,3 +37,6 @@ fi
 
 # Add variant entry to evdev.xml file
 python3 $DIR/edit_evdev.py $evdev_file
+
+# Enable right-alt as lvl3 key
+python3 $DIR/edit_dconf.py

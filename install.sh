@@ -32,11 +32,11 @@ if grep -Pq "^xkb_symbols\s+\"homophonic_altgr\"" "$symbol_file"; then
     echo "Layout is already installed in symbol file. Skipping."
 else
     echo "Installing 'homophonic_altgr' keyboard layout to symbols file."
-    cat $DIR/ua-homophonic-altgr >> $symbol_file
+    sudo cat $DIR/ua-homophonic-altgr >> $symbol_file
 fi
 
 # Add variant entry to evdev.xml file
-python3 $DIR/edit_evdev.py $evdev_file
+sudo python3 $DIR/edit_evdev.py $evdev_file
 
 # Enable right-alt as lvl3 key
 python3 $DIR/edit_dconf.py

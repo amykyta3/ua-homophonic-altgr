@@ -4,7 +4,7 @@ keys to access additional Cyrillic characters.
 This is unlike existing homophonic layouts that replace useful punctuation keys.
 
 To install:
-* Run install script as root: `sudo ./install.sh`
+* Run install script: `./install.sh`
 * In language settings, add the new keyboard: `Ukrainian (homophonic-AltGr)`
 
 

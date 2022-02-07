@@ -6,7 +6,7 @@ def dconf_read(key):
         return(None)
     else:
         return(result.stdout.decode('utf-8'))
-        
+
 def dconf_write(key, value):
     subprocess.run(['dconf', 'write', key, value])
 

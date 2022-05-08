@@ -32,7 +32,7 @@ if grep -Pq "^xkb_symbols\s+\"homophonic_altgr\"" "$symbol_file"; then
     echo "Layout is already installed in symbol file. Skipping."
 else
     echo "Installing 'homophonic_altgr' keyboard layout to symbols file."
-    sudo cat $DIR/ua-homophonic-altgr >> $symbol_file
+    cat $DIR/ua-homophonic-altgr | sudo tee -a $symbol_file > /dev/null
 fi
 
 # Add variant entry to evdev.xml file
